@@ -30,23 +30,6 @@
         return $error; 
     }
 
-    //function for getting profile pictures: 
-    function getProfilePic($id, $db, $dbName) {
-        //Grab the picture to the user from db: 
-		$sql = "SELECT location FROM $dbName.userpicture, $dbName.picture WHERE userpicture.pictureid = picture.id 
-		AND userid = :id"; 
-		$stmt = $db->prepare($sql);
-		$stmt->bindParam(':id', $id); 
-		$stmt->execute(); 
-
-		if ($row = $stmt->fetch()) {
-			$location = $row['location'];
-		} else {
-			$location = "img/profile-picture.png";
-		}
-		return $location; 
-    }
-
     //this checks the username: 
     function checkUsername($username, $db, $dbName) {
         $check = false; 
@@ -76,23 +59,9 @@
         }
         return $username; 
     }
-
-    /*
-    function getProfilePic2($id, $db, $dbName) {
-        $sql = "SELECT * FROM $dbName.picture WHERE id = 9";
-        $stmt = $db->prepare($sql);
-        if ($row = $stmt->execute()) {
-            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { 
-                $p = $row['picture'];
-                return $p;
-            }
-        } else {
-            echo("<p> rip </p>");
-        }
-   } */
-
-    
-    function getProfilePic2($id, $db, $dbName) {
+   
+    //function for getting profile pictures: 
+    function getProfilePic($id, $db, $dbName) {
         $p = null; 
         $sql = "SELECT picture, imagetype FROM $dbName.users WHERE id = :id";
         $stmt = $db->prepare($sql);
@@ -102,25 +71,6 @@
                 $p = $row['picture'];
                 return $p;
             }
-
-        } else {
-            echo("<p> rip </p>");
-        }
-        return $p;
-    }
-
-    
-    function getProfilePic3($id, $db, $dbName) {
-        $p = null; 
-        $sql = "SELECT picture, imagetype FROM $dbName.users WHERE id = :id";
-        $stmt = $db->prepare($sql);
-        $stmt->bindParam(':id', $id);
-        if ($row = $stmt->execute()) {
-            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { 
-                $p = $row['picture'];
-                return $p;
-            }
-
         } 
         return $p;
     }

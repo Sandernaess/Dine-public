@@ -11,6 +11,8 @@ CREATE TABLE users(
 	pwd VARCHAR(50) NOT NULL,
 	realname VARCHAR(50),
     	description VARCHAR(500),
+	`picture` BLOB,
+	`imageType` VARCHAR(150),
 	PRIMARY KEY(id)
 );
 

@@ -2,26 +2,13 @@
     //Get the difficulties from the db: 
     function getDifficulty($db) {
         //get the different options from the db: 
-            $sql = "SELECT * FROM difficulty"; 
-            $stmt = $db->prepare($sql); 
-            $stmt->execute(); 
-            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                echo("<option id='option' name='option' value='" . $row['name'] . "'>");
-                echo($row['name'] . "</option>");
-            }
-    }
-
-    function getRecipeImg($db, $id) {
-        $sql = "SELECT location FROM picture, recipe WHERE picture.id = recipe.pictureid and recipe.idrecipe = :id"; 
-        $stmt = $db->prepare($sql);
-        $stmt->bindParam(':id', $id);
+        $sql = "SELECT * FROM difficulty"; 
+        $stmt = $db->prepare($sql); 
         $stmt->execute(); 
-        if ($row = $stmt->fetch()) {
-            $location = $row['location'];
-        } else {
-            $location = "img/dalgona.jpg";
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            echo("<option id='option' name='option' value='" . $row['name'] . "'>");
+            echo($row['name'] . "</option>");
         }
-        return $location; 
     }
 
     //this grabs all the genres: 
@@ -62,7 +49,8 @@
         }
         return $liked; 
     }
-
+    
+    //gets all the ingredients for the chosen recipe
     function getIngredients($id, $db) {
        $sql =  "SELECT * FROM ingredients where recipeid = :id;";
        $stmt = $db->prepare($sql); 
@@ -80,7 +68,8 @@
         $stmt->execute(); 
         return $stmt; 
     }
-
+    
+    //get how to make the recipe
     function getHow($id, $db) {
         $sql =  "SELECT * FROM step where id = :id ORDER BY step;";
         $stmt = $db->prepare($sql); 
@@ -88,7 +77,8 @@
         $stmt->execute(); 
         return $stmt; 
     }
-
+    
+    //this is for when you have chosen a category in the index.php
     function getAbout($name, $db) {
         $sql =  "SELECT * FROM genreDesc where name = :nm";
         $stmt = $db->prepare($sql); 

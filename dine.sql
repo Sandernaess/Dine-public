@@ -13,25 +13,6 @@ CREATE TABLE users(
 	PRIMARY KEY(id)
 );
 
-SELECT * FROM recipe; 
-DELETE FROM likes; 
-DELETE FROM recipe where idrecipe in(26,22); 
-DELETE FROM step;
-ALTER TABLE recipe
-ADD COLUMN imageType varchar(150) DEFAULT NULL AFTER picture;
-SELECT * FROM users; 
-SELECT * FROM picture;
-SELECT * FROM users; 
-SELECT * FROM userpicture; 
- 
-ALTER TABLE recipe
-ADD COLUMN picture LONGBLOB DEFAULT NULL AFTER genre;
-SELECT * FROM recipe
-SELECT * FROM users; 
-SELECT * FROM recipe where genre = "Vegetarian";
-SELECT * FROM genre; 
-SELECT * FROM genreDesc; 
-
 CREATE TABLE `genreDesc` (
 	`id` INT NOT NULL AUTO_INCREMENT,
 	`name` VARCHAR(250) NOT NULL,
@@ -39,10 +20,6 @@ CREATE TABLE `genreDesc` (
     PRIMARY KEY (`id`)
 );
 
-INSERT INTO genreDesc (name, description) VALUES("Breakfast & Lunch", "");
-
-DELETE FROM recipe; 
-SELECT * FROM recipe; 
 DROP TABLE IF EXISTS `recipe`;
 CREATE TABLE `recipe` (
   `idrecipe` int(11) NOT NULL AUTO_INCREMENT,
@@ -59,9 +36,6 @@ CREATE TABLE `recipe` (
   CONSTRAINT `iduser` FOREIGN KEY (`iduser`) REFERENCES `users` (`id`), 
   CONSTRAINT `idpic` FOREIGN KEY (`pictureid`) REFERENCES `picture` (`id`)
 ); 
-
-INSERT INTO recipe (name, time, description, difficulty, iduser, pictureid, genre) 
-        VALUES ("test", "20", "dsad", "Easy", 1, null, "Vegetarian");
 
 CREATE TABLE `ingredients` (
 	`recipeid` int(11) NOT NULL,

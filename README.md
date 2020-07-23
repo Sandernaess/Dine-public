@@ -22,4 +22,5 @@ The purpose of this project is to practice building webapplications with PHP, HT
 - [x] Image upload
 - [ ] Category part 70% complete
 - [x] Recipe cards
+- [ ] Responsive Design for all pages
 

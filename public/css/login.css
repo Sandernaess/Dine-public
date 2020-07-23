@@ -1,0 +1,105 @@
+
+.login-box {
+    width: 90%; 
+    margin: 2% auto; 
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    border-radius: 8px;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-up {
+    background: #11998e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white; 
+}
+
+.sign-up * {
+    color: white; 
+}
+
+.white {
+    background-color: white; 
+    color: var(--dk); 
+}
+
+
+.login > p {
+    text-decoration: underline;
+    font-size: 18px; 
+}
+
+.login > form {
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px 0px; 
+}
+
+.sign-up {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    text-align: center;
+    padding: 20px 0px; 
+}
+
+.sign-up > h2 {
+    margin-top: 0px; 
+}
+
+.login > h2 {
+    margin-bottom: 0px; 
+}
+
+@media screen and (min-width: 768px) {
+
+    body {
+        background-image: url("../img/pattern-quotes.svg");
+        background-repeat: no-repeat;
+        background-position: 5% 18%;
+    }
+    
+    main {
+        min-height: 700px;
+        margin-top: 80px; 
+        
+    }
+
+    .login-box {
+        width: 80%; 
+        margin: 0% auto; 
+        display: flex; 
+        min-height: 400px;
+    }
+
+    .login {
+        width: 60%;
+    }
+
+    .sign-up {
+        width: 40%; 
+        text-align: center;
+    }
+
+    nav {
+        border-bottom: 1px solid #e5e8ed;
+        background-color: white;
+        margin: 0px; 
+    }
+
+    nav * {
+        color: black; 
+    }
+
+    #login {
+        text-decoration: underline;
+        color: var(--red); 
+    }
+}

@@ -1,0 +1,144 @@
+main {
+    padding-top: 20px; 
+}
+
+.real-name {
+    margin-bottom: 0px; 
+}
+
+.username {
+    margin-top: 10px; 
+}
+
+.profile-info {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-info > img {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%;
+}
+
+
+.profile-extra {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+.desc {
+    width: 80%; 
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+}
+
+.profile-activity {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+.recipe-overview {
+    width: 90%;
+    margin: 0% auto;  
+}
+
+.add {
+    font-size: 1.8rem; 
+    padding: 5px 20px;
+    background-color: #21bf73;
+}
+
+.btn-recipe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; 
+}
+
+.btn-recipe > a {
+    margin-right: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        display: flex; 
+        justify-content: space-around;
+        padding-top: 30px; 
+        min-height: 700px;
+    }
+
+    .user-description {
+        width: 20%; 
+    }
+    
+    .profile-info > img {
+        width: 250px; 
+        height: 250px; 
+        border-radius: 50%;
+    }
+
+    .profile-extra {
+        align-items: flex-start;
+    }
+
+    .desc {
+        width: unset;
+    }
+
+    .profile-activity {
+        display: flex; 
+        flex-direction: row;
+    }
+
+    .profile-activity > p {
+        padding-right: 10px;
+    }
+
+    .recipe-overview {
+        width: 70%; 
+        margin: unset; 
+    }
+
+    .recipes-created {
+        display: flex; 
+        flex-wrap: wrap;
+    }
+
+    .recipes-created > h1 {
+        width: 100%; 
+    }
+
+    .recipe-preview {
+        margin-right: 20px; 
+    }
+
+    nav {
+        border-bottom: 1px solid #e5e8ed;
+        background-color: white;
+        margin: 0px; 
+    }
+
+    nav * {
+        color: black; 
+    }
+
+    .recipe-link {
+        width: 30%; 
+    }
+
+    .btn-recipe {
+        display: block;
+        min-height: 60px;
+    }
+
+    .btn-recipe > a {
+        margin-right: 20px; 
+    }
+}

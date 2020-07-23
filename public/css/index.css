@@ -1,0 +1,276 @@
+
+.header-text {
+    display: none; 
+}
+
+.header-text > h2 {
+    color: white;
+}
+
+.header-title {
+    margin-top: 0px; 
+}
+
+.mobile-header {
+    padding-top: 50px;
+    text-align: center;
+}
+
+.category {
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    transition: box-shadow .3s ease-in-out,-webkit-box-shadow .3s ease-in-out;
+    min-width: 110px;
+}
+
+.category-link {
+    text-decoration: none;
+}
+
+.category-link:hover > p {
+    color: red; 
+}
+
+.category-link > img {
+    width: 40%; 
+    padding-top: 10px; 
+}
+
+.category-link > p {
+    text-align: center; 
+    margin-top: 10px; 
+}
+
+.category-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#recipe-link {
+    color: var(--red); 
+    font-size: 1.3rem;
+}
+
+.category-all {
+    width: 100%; 
+    text-align: center;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ac {
+    height: 250px;
+    width: 90%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin: 20px 0px; 
+}
+
+.ac > h2 {
+    color: white; 
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.ac:hover {
+    opacity: 0.6;
+    transition: 0.5s; 
+    cursor: pointer; 
+}
+
+#own-ac {
+    background-image: url('../img/burgers.jpg');
+    background-size: cover; 
+    background-position: center;
+}
+
+#about-ac {
+    background-image: url('../img/people.jpg');
+    background-size: cover; 
+    background-position: top;
+}
+
+.icon {
+    height: 17px;
+    width: 17px;
+}
+
+.recipe-search {
+    margin: 0px;
+    height: 50px;
+    border-radius: 0px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding: 0px 10px;
+    border: 1px solid transparent;
+}
+
+.search {
+    margin: 0px; 
+    padding: 0px 10px; 
+    height: 52px;
+    border-radius: 0px;
+    background-color: var(--red);
+    color: white; 
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.categories {
+    margin: 2% 0px; 
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.category {
+    margin: 10px; 
+    width: 28%;
+}
+
+.popular-recipes > h1 {
+    text-align: center;
+}
+
+
+@media screen and (min-width: 768px) {
+    header {
+        background-image: url('../img/header2.jpg');
+        background-size: cover;
+        height: 600px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 12% 48%;
+    }
+
+    main {
+        width: 70%; 
+        margin: 2% auto; 
+    }
+
+    .mobile-header {
+        display: none; 
+    }
+
+    .header-text {
+        display: flex; 
+        align-items: center;
+        justify-content: center; 
+        flex-wrap: wrap;
+        width: 50%;
+        margin: 0% auto;
+    }
+
+    .categories {
+        margin: unset;
+        display: flex; 
+        justify-content: space-between; 
+        flex-wrap: wrap;
+    }
+
+    .category-link > p {
+        font-size: 1.3rem; 
+        margin-top: 10px; 
+    }
+
+    .category-link > img {
+        width: 48px; 
+        height: 48px; 
+    }
+
+    .category {
+        margin: 10px; 
+        width: 190px;
+    }
+
+    .icon {
+        height: 17px;
+        width: 17px;
+    }
+
+    .about {
+        display: flex; 
+        flex-direction: row;
+        justify-content: space-between;  
+    }
+
+    .about-picture {
+        width: 40%; 
+    }
+    .about-picture > img {
+        width: 100%; 
+        height: 350px; 
+    }
+
+    .about-picture:hover > img {
+        opacity: 0.6;
+        transition: 0.5s; 
+        cursor: pointer; 
+    }
+
+    .ac {
+        width: 40%; 
+        min-height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+    .ac > h2 {
+        color: white; 
+        text-shadow: 2px 2px 4px #000000;
+
+    }
+
+    .ac:hover {
+        opacity: 0.6;
+        transition: 0.5s; 
+        cursor: pointer; 
+    }
+
+    .recipe-link {
+        width: 30%; 
+    }
+
+    .header-text > h2 {
+        width: 100%;
+        text-align: center; 
+    }
+
+}
+
+.loader {
+    position: fixed;
+    background-color: white;
+    z-index: 999;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.hidden {
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards; /* this makes the animation effect stay */ 
+    display: none; 
+}

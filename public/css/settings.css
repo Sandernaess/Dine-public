@@ -1,0 +1,95 @@
+
+.user-info > form {
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.profile-nav {
+    width: 100%; 
+}
+
+.user-info > h2 {
+    margin-top: 0px; 
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 60%; 
+        margin: 1% auto; 
+        min-height: 700px;
+    }
+
+    .user-picture > img {
+        width: 250px;
+        height: 250px;
+    }
+
+    nav {
+        border-bottom: 1px solid #e5e8ed;
+        box-shadow: 0 2px 4px rgba(3,27,78,.1);
+        background-color: white;
+        margin: 0px; 
+    }
+
+    nav * {
+        color: black; 
+    }
+
+    .profile-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        padding-top: 10px; 
+        padding-bottom: 40px;
+    }
+    .tablink {
+        border-bottom: 4px solid rgb(219, 229, 230);
+        transition: opacity 0.3s ease 0s;
+        flex: 1; 
+        text-align: center;
+    }
+
+    .tablink > h2 {
+        margin-bottom: 5px;
+        font-size: 1.5rem;
+    }
+
+    .tablink:hover {
+        border-bottom: 4px solid rgb(153, 153, 153);
+        cursor: pointer;
+    }
+
+    #profile {
+        border-bottom: 4px solid var(--dk);
+    }
+    
+    .profile-nav > h2:hover {
+        cursor: pointer;
+    }
+
+    .profile {
+        width: 100%; 
+        display: flex; 
+        justify-content: space-between;
+    }
+
+    .user-info, .user-picture {
+        width: 40%;
+    }
+
+    .desc {
+        width: 300px; 
+        max-width: 400px;
+        height: 100px;
+        padding: 5px;
+        border: 1px solid var(--dk);
+        border-radius: 3px; 
+        margin-bottom: 20px;
+        font-size: 17px;
+    }
+}

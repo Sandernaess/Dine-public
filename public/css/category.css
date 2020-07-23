@@ -1,0 +1,38 @@
+.most-liked {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.recipe-link:nth-child(-n+3) {
+    width: 30%; 
+}
+
+.recipe-link {
+    width: 23%; 
+    padding-right: 10px; 
+    min-width: 300px;
+}
+
+@media screen and (min-width: 768px) {
+    nav {
+        border-bottom: 1px solid #e5e8ed;
+        background-color: white;
+        margin: 0px; 
+    }
+
+    nav * {
+        color: black; 
+    }
+
+    main {
+        width: 70%; 
+        margin: 0% auto; 
+    }
+
+    .most-liked {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}

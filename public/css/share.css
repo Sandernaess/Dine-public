@@ -1,0 +1,75 @@
+
+select {
+    border: 1px solid var(--dk);
+    border-radius: 3px;
+    margin: 10px 0px; 
+    width: 300px;
+    padding: 5px;
+    font-size: 17px; 
+    width: 80%; 
+}
+
+
+.create-recipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2% auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    border-bottom: 10px solid var(--dk);
+    padding: 0px 10px; 
+}
+
+.create-recipe > form {
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input, textarea, select {
+    width: 80%; 
+}
+
+@media screen and (min-width: 768px) {
+    nav {
+        border-bottom: 1px solid #e5e8ed;
+        background-color: white;
+        margin: 0px; 
+    }
+
+    nav * {
+        color: black; 
+    }
+
+    .create-recipe {
+        width: 70%;
+        margin: 2% auto;
+    }
+
+    .create-recipe > h1 {
+        text-align: center;
+    }
+
+    form > h1 {
+        margin-bottom: 10px;
+    }
+
+    .description {
+        min-width: 500px;
+        min-height: 200px;
+        max-width: 800px;
+        max-height: 400px;
+        font-size: 16px;
+        margin: 10px 0px;
+    }
+    input#minutes {
+        width: 100px; 
+    }
+
+
+}

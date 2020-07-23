@@ -1,0 +1,68 @@
+
+main {
+    margin-top: 30px; 
+}
+
+.register-box {
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    border-radius: 8px; 
+    padding: 20px 0px; 
+    width: 90%; 
+    margin: 0% auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register-box > form {
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.register-box > h2 {
+   margin: 10px 0px; 
+}
+
+.password-rule {
+    color: var(--red);
+    margin: 0px; 
+}
+
+
+@media screen and (min-width: 768px) {
+    main {
+        min-height: 700px;
+        margin-top: 80px; 
+        background-image: url('../img/pattern-bg.svg'), url("../img/circles.svg");
+        background-repeat: no-repeat;
+        background-position: 97% 12%, -12% 78%;
+    }
+
+    input {
+        height: 30px;
+        width: 300px;
+    }
+
+    .register-box {
+        padding: 30px 0px; 
+        width: 60%; 
+        min-height: 500px;
+    }
+ 
+    nav {
+        border-bottom: 1px solid #e5e8ed;
+        background-color: white;
+        margin: 0px; 
+    }
+
+    nav * {
+        color: black; 
+    }
+
+    #signup {
+        text-decoration: underline;
+        color: var(--red); 
+    }
+}

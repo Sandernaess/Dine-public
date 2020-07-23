@@ -1,0 +1,196 @@
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.recipe-img > img {
+    width: 100%; 
+}
+
+.desc-top {
+    text-align: center;
+}
+
+input {
+    width: 90%; 
+}
+
+.recipe-like {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: unset; 
+    border: none; 
+}
+
+.recipe-like > img {
+    width: 80%; 
+    max-height: 550px;
+}
+
+.recipe-like:hover {
+    cursor: pointer;
+}
+
+.recipe-extra {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #d6d6d6;
+    border-bottom: 1px solid #d6d6d6;
+    align-items: center;
+}
+
+.recipe-extra > article {
+    border-right: 1px solid #d6d6d6;
+    height: 4rem;
+    flex: 1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recipe-extra > article:last-child {
+    border-right: unset;
+}
+
+.recipe-desc > p {
+    padding: 0px 20px; 
+}
+
+.icon {
+    height: 16px;
+    width: 16px;
+}
+
+.ingredients {
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2px 60px; 
+}
+
+.other {
+    background-color: var(--dk);
+    text-align: center;
+}
+
+.other > h2 {
+    color: white; 
+}
+
+.other {
+    padding: 1px 0px;
+    margin: 20px 0px;  
+}
+
+.ingredient-list {
+    padding: 0;
+    margin: 0;
+}
+
+.ingredient-list > li {
+    padding: 5px 0px;
+    font-size: 17px;
+}
+
+
+.step {
+    background-color: var(--red);
+    color: white; 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 21px;
+    width: 21px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.delete {
+    display: none;
+    background-color: red;
+    color: white; 
+    border-radius: 8px;
+    padding: 4px 10px;
+    font-size: 13px;
+}
+
+#add {
+    display: none; 
+}
+
+#save {
+    display: none;
+}
+
+#edit {
+    margin-bottom: 20px;
+}
+
+.how-to > div {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ingredients > form {
+    margin-bottom: 30px;
+}
+
+.error-message {
+    width: 100%; 
+}
+
+@media screen and (min-width: 768px) {
+    nav {
+        border-bottom: 1px solid #e5e8ed;
+        background-color: white;
+        margin: 0px; 
+    }
+
+    nav * {
+        color: black; 
+    }
+
+    main {
+        width: 70%;
+        margin: 2% auto;
+    }
+
+    .success {
+        top: 200px; 
+    }
+
+    .ingredients {
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: unset; 
+    }
+
+    .ingredient-display {
+        width: 50%; 
+    }
+
+    .ingredient-how {
+        width: 40%; 
+        min-width: 250px;
+    }
+
+    input {
+        width: 250px; 
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    main {
+        width: 50%; 
+    }
+}

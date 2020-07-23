@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
+:root {
+    --dk: #1d1b38;
+    --red: #e43f5a;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+h1 {
+    font-size: 2rem;
+    color: var(--dk);
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: var(--dk);
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: var(--dk);
+}
+
+p {
+    color: var(--dk);
+}
+
+/* Buttons */
+Button {
+    text-decoration: none;
+    background-color: none;
+    padding: 15px 40px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-size: 1.2rem;
+}
+
+textarea,
+input,
+select {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+
+/* button for dark backgrounds */
+.btn-dark {
+    background-color: var(--dk);
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
+.btn-dark:hover {
+    background-color: white;
+    color: var(--dk);
+}
+
+/* white button for dark backgrounds */
+.btn-white {
+    background-color: white;
+    color: var(--dk);
+    border-radius: 8px;
+}
+
+.btn-white:hover {
+    color: var(--red);
+}
+
+.btn {
+    border-radius: 8px;
+    box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.40);
+    transition: 0.19s ease 0s;
+}
+
+.btn:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.white {
+    background-color: white;
+    color: var(--dk);
+}
+
+.white:hover {
+    background-color: var(--dk);
+    color: white;
+}
+
+.dark {
+    background-color: var(--dk);
+}
+
+.dark:hover {
+    background-color: transparent;
+    border: 2px solid var(--dk);
+    color: var(--dk);
+}
+
+.nav-links>a:hover {
+    color: var(--red);
+}
+
+/* Styling for error messages */
+.error-message {
+    color: var(--red);
+}
+
+.footer-logo {
+    color: white;
+}
+
+footer {
+    background-color: var(--dk);
+    color: white;
+    min-height: 100px;
+    padding: 0px 20px; 
+}
+
+footer * {
+    color: white;
+}
+
+
+.like-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+    transition: box-shadow .3s ease-in-out, -webkit-box-shadow .3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 70px;
+    margin-right: 20px;
+}
+
+.like-button:hover {
+    cursor: pointer;
+}
+
+.like-button>img {
+    width: 65%;
+}
+
+input {
+    border: 1px solid var(--dk);
+    border-radius: 3px;
+    height: 30px;
+    margin: 10px 0px;
+    width: 300px;
+    padding: 5px;
+    font-size: 17px;
+}
+
+input:focus {
+    border: 1px solid #38ef7d;
+    background-color: #f3f3f3;
+}
+
+input:active {
+    border: 1px solid #38ef7d;
+}
+
+/* succesful message */
+.success {
+    background-color: #21bf73;
+    color: white;
+    position: absolute;
+    left: 20px;
+    border-radius: 8px;
+    padding: 0px 40px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+}
+
+.success>p {
+    color: white;
+}
+
+.recipe-link {
+    text-decoration: none;
+}
+
+.recipe-link:hover>.recipe-title {
+    text-decoration: underline;
+    color: var(--dk);
+}
+
+.info {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.infos {
+    display: flex;
+}
+
+.infos>p {
+    margin: 6px 5px;
+}
+
+.recipe-info {
+    display: flex;
+    justify-content: space-between
+}
+
+.recipe-section {
+    width: 70%;
+    margin: 2% auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.recipe-section>h1 {
+    width: 100%;
+}
+
+/* recipe cards */
+.recipe-preview {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.recipe-preview>img {
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    max-height: 200px;
+    height: 200px;
+}
+
+.recipe-title {
+    margin-top: 10px;
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+nav {
+    display: none;
+}
+
+.mobile-nav {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    background-color: var(--dk);
+    color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 4; 
+}
+
+.mobile-logo {
+    padding-left: 30px; 
+}
+
+.hamburger-menu {
+    padding-right: 30px;
+}
+
+.hamburger-menu>img {
+    width: 40px;
+    height: 40px;
+    padding-left: 20px;
+}
+
+.hamburger:hover {
+    cursor: pointer;
+}
+
+nav * {
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 40px;
+}
+
+.nav-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.under-nav {
+    text-align: left;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: var(--dk);
+    border-bottom: 1px solid #e5e8ed;
+    box-shadow: 0 2px 4px rgba(3, 27, 78, .1);
+    display: flex;
+    align-items: center;
+}
+
+.under-nav>h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-left: 1px solid #e5e8ed;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+    border-right: 1px solid #e5e8ed;
+    padding: 0px 30px;
+}
+
+.icon {
+    width: 23px;
+    height: 23px;
+}
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+        color: var(--dk);
+    }
+
+    h2 {
+        font-size: 2.0rem;
+        color: var(--dk);
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        color: var(--dk);
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 100px 5px 100px;
+    }
+
+    .logo {
+        font-size: 2.4rem;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-links>a {
+        padding: 0px 5px;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+}
+
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 5;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    right: 0;
+    background-color: var(--dk);
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: var(--red);
+    text-decoration: underline;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 80px;
+    margin-left: 50px;
+}
+
+.hamburger-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}

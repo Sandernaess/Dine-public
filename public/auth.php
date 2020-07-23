@@ -32,7 +32,7 @@
             $_SESSION['ID'] = $id;  
             $_SESSION['username'] = $row['username']; 
             $_SESSION['name'] = $row['realname']; 
-            $_SESSION['picture'] = getProfilePic3($id, $db, $dbName); 
+            $_SESSION['picture'] = getProfilePic($id, $db, $dbName); 
             $_SESSION['description'] = $row['description']; 
             //go to start page: 
             header("Location: index.php"); 

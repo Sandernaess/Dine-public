@@ -4,6 +4,7 @@ CREATE SCHEMA dine;
 USE dine;
 GRANT ALL ON dine.* TO 'XXX';
 DROP TABLE users; 
+
 CREATE TABLE users(
 	id INT(11)  NOT NULL AUTO_INCREMENT,
 	username VARCHAR(50) NOT NULL, 

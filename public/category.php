@@ -4,15 +4,22 @@
   include ("recipeFunctions.php");
   include("functions.php");
   
-  if (isset($_GET['category'])) {
-    $cat = $_GET['category'];
-
-    $stmt = getAbout($cat, $db); 
-    if ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {  
-        $name = $row['name']; 
-        $desc = $row['description']; 
-    }
-  }  
+    //grab the category chosen: 
+    if (isset($_GET['category'])) {
+        if ($_GET['category'] == "fast") {
+            $cat = "Fast & Easy"; 
+        } elseif ($_GET['category'] == "Breakfast") {
+            $cat = "Breakfast & Lunch";
+        } else {
+            $cat = $_GET['category']; 
+        }
+  
+        $stmt = getAbout($cat, $db); 
+        if ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {  
+            $name = $row['name']; 
+            $desc = $row['description']; 
+        }
+    }  
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +42,7 @@
       include("../include/nav.php");
     ?>
     <section class="under-nav">
-        <h3>Vegetarian</h3>
+        <h3><?php echo($name); ?></h3>
     </section>
     <main>
         <section class="top">

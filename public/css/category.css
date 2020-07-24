@@ -1,7 +1,18 @@
+main {
+    min-height: 700px;
+    padding-top: 40px;
+}
+
+.top {
+    width: 80%; 
+    margin: 5% auto;
+}
+
 .most-liked {
     display: flex; 
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .recipe-link:nth-child(-n+3) {
@@ -11,10 +22,19 @@
 .recipe-link {
     width: 23%; 
     padding-right: 10px; 
-    min-width: 300px;
+    min-width: 250px;
 }
 
 @media screen and (min-width: 768px) {
+    main {
+        min-height: 650px;
+        padding: unset; 
+    }
+    .top {
+        width: unset; 
+        margin: unset; 
+    }
+
     nav {
         border-bottom: 1px solid #e5e8ed;
         background-color: white;

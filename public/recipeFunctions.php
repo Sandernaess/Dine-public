@@ -11,19 +11,6 @@
             }
     }
 
-    function getRecipeImg($db, $id) {
-        $sql = "SELECT location FROM picture, recipe WHERE picture.id = recipe.pictureid and recipe.idrecipe = :id"; 
-        $stmt = $db->prepare($sql);
-        $stmt->bindParam(':id', $id);
-        $stmt->execute(); 
-        if ($row = $stmt->fetch()) {
-            $location = $row['location'];
-        } else {
-            $location = "img/dalgona.jpg";
-        }
-        return $location; 
-    }
-
     //this grabs all the genres: 
     function getGenres($db) {
         //get the different options from the db: 

@@ -30,7 +30,7 @@
     ?>
         <article class="header-text animate__animated">
             <h2>Discover delicious food recipes or share your own.</h2>
-            <form action="search.php" method="POST">
+            <form class="search-recipe" action="search.php" method="POST">
                 <input name="search" class="recipe-search" placeholder="Search for recipes.." type="text">
                 <button type="submit" class="btn search">Search</button>
             </form>
@@ -52,7 +52,7 @@
         <!-- Categories section -->
         <section class="categories">
             <article class="category">
-                <a class="category-link" title="Popular now" href="#">
+                <a class="category-link" title="Popular now" href="popular.php">
                     <img src="img/chopsticks.svg" alt="">
                     <p>Popular now</p>
                 </a>
@@ -117,8 +117,8 @@
     <section class="recipe-section popular-recipes">
         <h1>Popular Now</h1>
         <!-- Results here -->
-        <?php 
-            $sql = "SELECT * FROM $dbName.recipe LIMIT 6;"; 
+        <?php  
+            $sql ="SELECT idrecipe, name, time, difficulty, picture, imageType, COUNT(*) as total from likes, recipe where idrecipe = idr group by idr ORDER BY total DESC LIMIT 6;";
             $stmt = $db->prepare($sql);
             $stmt->execute();
 

@@ -38,7 +38,6 @@
                 $diff = $row['difficulty']; 
                 $user = $row['iduser'];  
                 $likes = getLikes($ID, $db); 
-                $pic = getRecipeImg($db, $ID);
                 $username = getUsername($user, $db, $dbName);
                 
             }   
@@ -88,9 +87,10 @@
                     if ($owner) {
                         echo("You"); 
                     } else {
-                        echo($username);
+                        echo('<a href="profile.php?id='.$user.'">'.$username.'</a>');
                     } ?></b></p>
                 <p><img src="img/heart.svg" class="icon" alt=""> Likes: <b><?php echo($likes) ?></b></p>
+               
             </article>
             <p><?php echo($desc); ?></p>
 

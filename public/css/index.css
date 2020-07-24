@@ -12,7 +12,7 @@
 }
 
 .mobile-header {
-    padding-top: 50px;
+    padding-top: 130px;
     text-align: center;
 }
 
@@ -118,11 +118,14 @@
     padding: 0px 10px; 
     height: 52px;
     border-radius: 0px;
-    background-color: var(--red);
     color: white; 
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
+}
+
+.navsearch {
+    display: flex; 
 }
 
 .categories {
@@ -139,6 +142,10 @@
 
 .popular-recipes > h1 {
     text-align: center;
+}
+
+.search-recipe {
+    display: flex;
 }
 
 

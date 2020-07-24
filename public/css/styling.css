@@ -255,6 +255,7 @@ nav {
 
 .mobile-nav {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-end;
     justify-content: space-between;
     background-color: var(--dk);
@@ -262,6 +263,43 @@ nav {
     position: fixed;
     width: 100%;
     z-index: 4; 
+}
+
+.navsearch {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    display: none;
+}
+
+.mobile-search {
+    width: 70%;
+    height: unset; 
+}
+
+.search-recipe {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.search {
+    background-color: var(--red);
+}
+
+.ms {
+    height: unset;
+    width: unset;
+    width: 80%;
+    color: black; 
+}
+
+.mobile-search > button {
+    height: unset;
+    margin: unset;
+    padding: 5px;
 }
 
 .mobile-logo {
@@ -275,7 +313,7 @@ nav {
 .hamburger-menu>img {
     width: 40px;
     height: 40px;
-    padding-left: 20px;
+    margin-left: 20px;
 }
 
 .hamburger:hover {
@@ -304,7 +342,7 @@ nav * {
     color: var(--dk);
     border-bottom: 1px solid #e5e8ed;
     box-shadow: 0 2px 4px rgba(3, 27, 78, .1);
-    display: flex;
+    display: none;
     align-items: center;
 }
 
@@ -326,6 +364,10 @@ nav * {
 }
 
 @media screen and (min-width: 768px) {
+    .under-nav {
+        display: flex; 
+    }
+
     h1 {
         font-size: 2.5rem;
         color: var(--dk);

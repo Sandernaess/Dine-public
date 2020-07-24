@@ -66,6 +66,10 @@ main {
     margin-right: 20px;
 }
 
+.user-description {
+    padding-top: 50px;
+}
+
 @media screen and (min-width: 768px) {
     main {
         display: flex; 
@@ -76,6 +80,7 @@ main {
 
     .user-description {
         width: 20%; 
+        padding-top: unset;
     }
     
     .profile-info > img {

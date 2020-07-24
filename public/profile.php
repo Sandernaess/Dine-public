@@ -3,10 +3,6 @@
     include ("../include/dbh.php");
     include ("functions.php");
     include ("recipeFunctions.php");
-    //check if user is logged in: 
-    if (!isset($_SESSION['ID'])) {
-        header("Location: login.php"); 
-    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,14 +17,38 @@
     <title>Dine | Profile</title>
 </head>
 <?php 
-    //get user information
-    $username = $_SESSION['username']; 
-    $name = $_SESSION['name'];
-    $userID = $_SESSION['ID'];
-    if (isset($_SESSION['description'])) {
-        $desc = $_SESSION['description'];
+    $own = false; 
+    
+    //check if visiting a profile
+    if (isset($_GET['id'])) {
+        $userID = $_GET['id']; 
+        //get user information from database
+        $stmt = getUserinfo($userID, $db); 
+        while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $username = $row['username']; 
+            $name = $row['realname'];
+            if (isset($row['description'])) {
+                $desc = $row['description'];
+            } else {
+                $desc = "This user has no description yet";
+            }
+        }
+        
     } else {
-        $desc = "This user has no description yet";
+        //check if user is logged in: 
+        if (!isset($_SESSION['ID'])) {
+            header("Location: login.php"); 
+            exit; 
+        }
+        $own = true; 
+        $username = $_SESSION['username']; 
+        $name = $_SESSION['name'];
+        $userID = $_SESSION['ID'];
+        if (isset($_SESSION['description'])) {
+            $desc = $_SESSION['description'];
+        } else {
+            $desc = "This user has no description yet";
+        }
     }
 
     //get total created recipes: 
@@ -61,10 +81,21 @@
         <section class="user-description">
             <article class="profile-info">
             <?php 
-                if (isset($_SESSION['picture'])) {
-                    echo('<img src="data:image/jpeg;base64,'.base64_encode($_SESSION['picture']).'"/>');
+                //if own profile we can grab picture from the session, else get picture from db: 
+                if ($own) {
+                    if (isset($_SESSION['picture'])) {
+                        echo('<img src="data:image/jpeg;base64,'.base64_encode($_SESSION['picture']).'"/>');
+                    } else {
+                        echo('<img src="img/profile-picture.png" />');
+                    }
                 } else {
-                    echo('<img src="img/profile-picture.png" />');
+                    //this gets the image from the db: 
+                    $img = getProfilePic($userID, $db, $dbName); 
+                    if ($img != null) {
+                        echo('<img src="data:image/jpeg;base64,'.base64_encode($img).'"/>');
+                    } else {
+                        echo('<img src="img/profile-picture.png" />');
+                    }
                 }
             ?>
                 <h1 class="real-name"><?php echo($name); ?></h1>
@@ -73,7 +104,12 @@
 
             <article class="profile-extra">
                 <p class="desc"><?php echo($desc) ?></p>
-                <a href="settings.php"><button class="btn dark">Edit profile</button></a>
+                <?php 
+                    //be able to edit profile if own profile
+                    if ($own) {
+                        echo('<a href="settings.php"><button class="btn dark">Edit profile</button></a>');
+                    }
+                ?>
             </article>
 
             <article class="profile-activity">
@@ -131,12 +167,13 @@
                     if ($total < 1) {
                         echo("<p> No recipes found! </p>");
                     }
-                    
+                    if ($own) {
+                        echo('<article class="btn-recipe">'); 
+                        echo('<a href="share.php"><button class="btn dark add">+</button></a>');
+                        echo('<a href="#"><button class="btn dark">SEE ALL</button></a>');
+                        echo('</article>');
+                    }     
                 ?>
-                <article class="btn-recipe">
-                    <a href="share.php"><button class="btn dark add">+</button></a>
-                    <a href="#"><button class="btn dark">SEE ALL</button></a>
-                </article>
             </article>
 
             <!-- Liked recipes -->

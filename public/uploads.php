@@ -68,7 +68,7 @@
                 $stmt->bindParam(':id',$userID);
                 $userID = $_SESSION['ID'];
                if ($stmt->execute()) {
-                    $_SESSION['picture'] = getProfilePic3($userID, $db, $dbName); 
+                    $_SESSION['picture'] = getProfilePic($userID, $db, $dbName); 
                     header("Location: profile.php");
                 } else {
                     echo "\nPDO::errorInfo():\n";

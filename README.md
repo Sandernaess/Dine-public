@@ -19,7 +19,7 @@ Live demo: https://dine1.herokuapp.com/ (Heroku app so might take some time to s
 - [x] Viewing recipes
 - [x] User Profile
 - [x] Edit Profile
-- [ ] View other profiles
+- [x] View other profiles
 - [x] Like system
 - [x] Image upload
 - [ ] Category part 70% complete

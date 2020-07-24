@@ -72,7 +72,6 @@
                 $p = $row['picture'];
                 return $p;
             }
-
         } 
         return $p;
     }

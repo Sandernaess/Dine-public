@@ -49,7 +49,8 @@
         }
         return $liked; 
     }
-
+    
+    //gets all the ingredients for the chosen recipe
     function getIngredients($id, $db) {
        $sql =  "SELECT * FROM ingredients where recipeid = :id;";
        $stmt = $db->prepare($sql); 
@@ -67,7 +68,8 @@
         $stmt->execute(); 
         return $stmt; 
     }
-
+    
+    //get how to make the recipe
     function getHow($id, $db) {
         $sql =  "SELECT * FROM step where id = :id ORDER BY step;";
         $stmt = $db->prepare($sql); 
@@ -75,7 +77,8 @@
         $stmt->execute(); 
         return $stmt; 
     }
-
+    
+    //this is for when you have chosen a category in the index.php
     function getAbout($name, $db) {
         $sql =  "SELECT * FROM genreDesc where name = :nm";
         $stmt = $db->prepare($sql); 

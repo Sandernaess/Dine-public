@@ -40,7 +40,7 @@
             }
         }
     
-        $pictureID = rand(1,4); //this would be the result, instead we generate a random image.
+        //add the recipe to the db: 
         $sql = "INSERT INTO $dbName.recipe (name, time, description, difficulty, iduser, pictureid, genre) 
         VALUES (:nm, :ti, :dc, :di, :rID, :pID, :gr);"; 
 
@@ -59,8 +59,8 @@
 
         //run stmt: 
         if ($row = $stmt->execute()) {
-            $rID = $db->lastInsertId(); 
-                       
+            //get the created ID from db, then insert the image to DB. 
+            $rID = $db->lastInsertId();     
             $sql2 = "UPDATE $dbName.recipe SET imagetype = '{$imageProperties['mime']}' , picture = '{$imgData}' WHERE idrecipe = :id;";
             $stmt2 = $db->prepare($sql2);
             $stmt2->bindParam(':id',$rID);

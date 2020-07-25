@@ -12,7 +12,8 @@
         $difficulty = $_POST['difficulty']; 
         $minutes = $_POST['minutes']; 
         $genre = $_POST['genre'];
-
+        
+        //check image size and filetype for the image uploaded 
         if (count($_FILES) > 0) {
             if (is_uploaded_file($_FILES['recipeImage']['tmp_name'])) {
                 $imgData = addslashes(file_get_contents($_FILES['recipeImage']['tmp_name']));

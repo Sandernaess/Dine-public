@@ -23,6 +23,12 @@
             case "sqlerror": 
                 $error = "Sorry, an error has occured. Please try again"; 
                 break; 
+            case "filetype": 
+                $error = "Sorry, only .jpg and .png files allowed";
+                break;
+            case "filesize": 
+                $error ="Sorry, the image size is too large. Must be under 5 MB.";
+                break;
             default: 
                 $error = "";
                 break; 
@@ -72,6 +78,7 @@
                 $p = $row['picture'];
                 return $p;
             }
+
         } 
         return $p;
     }

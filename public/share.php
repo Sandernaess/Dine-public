@@ -38,13 +38,20 @@
     </section>
     <main>
         <section class="create-recipe">
+            <?php 
+                //this checks for errors: 
+                if (isset($_GET['error'])) {
+                    $error = error($_GET['error']);
+                    if (!empty($error)) {
+                        echo("<p class='error-message'> <img class='icon' src='../img/error.svg' alt=''> $error </p>"); 
+                    }    
+                }
+            ?>
             <form action="uploads.php" method="POST" enctype="multipart/form-data">
                 <h1>Share your recipe</h1>
                 <!-- Image upload -->
                 <input class="file-upload" type="file" name="recipeImage" size="30">
             
-          
-
                 <!-- Title -->
                 <label for="title">Title</label>
                 <input placeholder="A title for your recipe" name="title" id="title" type="text" required>

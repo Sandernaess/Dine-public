@@ -25,4 +25,4 @@ Live demo: https://dine1.herokuapp.com/ (Heroku app so might take some time to s
 - [x] Category part
 - [x] Recipe cards
 - [x] Responsive Design for all pages
-- [ ] Edit & Delete recipes
+- [ ] Edit and delete recipes

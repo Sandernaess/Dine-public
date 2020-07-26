@@ -215,12 +215,14 @@ input:active {
 }
 
 .recipe-section {
-    width: 70%;
+    width: 100%;
     margin: 2% auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
+
 
 .recipe-section>h1 {
     width: 100%;
@@ -269,8 +271,6 @@ nav {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding-bottom: 10px;
-    padding-top: 10px;
     display: none;
 }
 
@@ -413,6 +413,17 @@ nav * {
         align-items: center;
     }
 
+    .recipe-section {
+        width: 70%;
+        margin: 2% auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .recipe-section>h1 {
+        width: 100%;
+    }
 
 }
 

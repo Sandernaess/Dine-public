@@ -32,7 +32,8 @@
 }
 
 .category-link > img {
-    width: 40%; 
+    width: 45px;
+    height: 45px;
     padding-top: 10px; 
 }
 
@@ -148,6 +149,18 @@
     display: flex;
 }
 
+.recipe-link {
+    width: 80%;
+    min-width: 250px; 
+}
+
+
+@media screen and (min-width: 500px) {
+    .recipe-link {
+        width: 40%;
+        min-width: 250px; 
+    } 
+}
 
 @media screen and (min-width: 768px) {
     header {

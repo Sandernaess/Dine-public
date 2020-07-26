@@ -1,7 +1,7 @@
 
 .login-box {
     width: 90%; 
-    margin: 2% auto; 
+    margin: 0% auto; 
     background-color: white;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
     border-radius: 8px;
@@ -58,6 +58,14 @@
     margin-bottom: 0px; 
 }
 
+main {
+    padding-top: 70px; 
+}
+
+input {
+    width: 90%; 
+}
+
 @media screen and (min-width: 768px) {
 
     body {
@@ -69,7 +77,11 @@
     main {
         min-height: 700px;
         margin-top: 80px; 
-        
+        padding-top: unset;
+    }
+
+    input {
+        width: 300px; 
     }
 
     .login-box {

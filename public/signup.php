@@ -24,7 +24,7 @@
     <main>
         <section class="register-box">    
             <h2>Sign Up</h2>
-            <p>For this demo, you can also log into a demo account instead if you want to.</p>
+            <p id="signup">For this demo, you can also log into a demo account instead if you want to.</p>
             <?php 
                 //this checks for errors: 
                 if (isset($_GET['error'])) {

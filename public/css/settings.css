@@ -1,8 +1,5 @@
-
-.user-info > form {
-    display: flex; 
-    flex-direction: column;
-    align-items: flex-start;
+main {
+    padding-top: 60px;
 }
 
 .profile-nav {
@@ -13,19 +10,99 @@
     margin-top: 0px; 
 }
 
+.profile-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding-top: 10px; 
+    padding-bottom: 40px;
+}
+
+.tablink {
+    border-bottom: 4px solid rgb(219, 229, 230);
+    transition: opacity 0.3s ease 0s;
+    flex: 1; 
+    text-align: center;
+}
+
+.tablink > h2 {
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+}
+
+.tablink:hover {
+    border-bottom: 4px solid rgb(153, 153, 153);
+    cursor: pointer;
+}
+
+#profile {
+    border-bottom: 4px solid var(--dk);
+}
+
+.profile-nav > h2:hover {
+    cursor: pointer;
+}
+
+.user-info, 
+.user-picture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.desc {
+    width: 90%;
+    max-width: 400px;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid var(--dk);
+    border-radius: 3px; 
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+.user-picture > img {
+    width: 150px;
+    height: 150px;
+}
+
+input, textarea {
+    width: 90%; 
+}
+
+
 @media screen and (min-width: 768px) {
     main {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        width: 60%; 
+        width: 80%; 
         margin: 1% auto; 
         min-height: 700px;
+        padding-top: unset;
+    }
+
+    .profile-nav {
+        padding-bottom: 10px;
+    }
+
+    .user-info > form {
+        align-items: flex-start;
     }
 
     .user-picture > img {
-        width: 250px;
-        height: 250px;
+        width: 100%; 
+        min-height: 200px;
+        max-width: 250px;
+        max-height: 250px;
     }
 
     nav {
@@ -39,39 +116,11 @@
         color: black; 
     }
 
-    .profile-nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: white;
-        padding-top: 10px; 
-        padding-bottom: 40px;
-    }
-    .tablink {
-        border-bottom: 4px solid rgb(219, 229, 230);
-        transition: opacity 0.3s ease 0s;
-        flex: 1; 
-        text-align: center;
-    }
 
     .tablink > h2 {
-        margin-bottom: 5px;
         font-size: 1.5rem;
     }
-
-    .tablink:hover {
-        border-bottom: 4px solid rgb(153, 153, 153);
-        cursor: pointer;
-    }
-
-    #profile {
-        border-bottom: 4px solid var(--dk);
-    }
     
-    .profile-nav > h2:hover {
-        cursor: pointer;
-    }
-
     .profile {
         width: 100%; 
         display: flex; 
@@ -80,16 +129,12 @@
 
     .user-info, .user-picture {
         width: 40%;
+        padding-top: unset;
     }
+}
 
-    .desc {
-        width: 300px; 
-        max-width: 400px;
-        height: 100px;
-        padding: 5px;
-        border: 1px solid var(--dk);
-        border-radius: 3px; 
-        margin-bottom: 20px;
-        font-size: 17px;
+@media screen and (min-width: 1200px) {
+    main {
+        width: 60%; 
     }
 }

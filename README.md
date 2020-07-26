@@ -24,5 +24,5 @@ Live demo: https://dine1.herokuapp.com/ (Heroku app so might take some time to s
 - [x] Image upload
 - [x] Category part
 - [x] Recipe cards
-- [ ] Responsive Design for all pages
+- [x] Responsive Design for all pages
 

@@ -1,5 +1,5 @@
 # Dine - Discover and share food recipes. 
-Dine is a ongoing personal project where users should be able to discover and share food recipes. Users can create their own profiles and create recipes. There will be a profile page, with an overview over created recipes and liked recipes.  
+Dine is a personal project where users are able to discover and share food recipes created by others. Signed in users have their own profile page, with an overview over created and liked recipes. 
 
 The purpose of this project is to practice building webapplications with PHP, HTML, CSS & JavaScript. I am using MySQL for the database to this project. 
 

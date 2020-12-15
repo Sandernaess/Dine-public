@@ -3,7 +3,6 @@ Dine is a personal project where users are able to discover and share food recip
 
 The purpose of this project where to practice building webapplications with PHP, HTML, CSS & JavaScript. For this project I am using MySQL as the database.
 
-Live demo: https://dine1.herokuapp.com/ (Heroku app so might take some time to spin up)
 
 ## Design Preview
 ![Design preview ](public/img/preview3.png)
